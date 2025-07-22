@@ -41,4 +41,4 @@ app.delete('/student/:student_id', ({params}) => {
 })
 
 app.listen(3000);
-console.log('🦊 Elysia running at http://localhost:3000, เฮลโหลเทสๆ');
+console.log('🦊 ElysiaJS_LNW Running at http://localhost:3000, เฮลโหลเทสๆ');

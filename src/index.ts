@@ -1,7 +1,9 @@
 import { Elysia } from "elysia";
 import db from "./database"
 
-const app = new Elysia().get("/", () => "Hello Bro").listen(3000);
+const app = new Elysia().onBeforeHandle(({ set }) => {
+  set.headers['Content-Type'] = 'text/plain; charset=utf-8';
+}).get("/", () => "Hello Bro").listen(3000);
 
 app.get('/students', () => {
   const all_std = db.prepare('SELECT * FROM students');
